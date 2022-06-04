@@ -1,0 +1,53 @@
+:root {
+    --yellow: #FFCC00;
+    --blue: #060CE9;
+    --white: #fff;
+    --heading: 'Kdam Thmor Pro', sans-serif;
+    --body: 'Tinos', serif;
+    
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blue);
+}
+.header {
+    text-align: center;
+    margin: 1rem 0;
+    color: var(--white);
+    font-family: var(--heading);
+    letter-spacing: 0.3rem;
+    font-size: 3rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-box {
+    padding: 5rem 3rem;
+    display: inline-block;
+    flex: 0 1 15rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--yellow);
+    background-color: var(--blue);
+    font-family: var(--body);
+    text-transform: uppercase;
+    border: 5px solid #000;
+}
+
+#game-selector {
+    margin-top: 5rem;
+}
+
+#random-container {
+    display: none;
+}
