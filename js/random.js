@@ -45,4 +45,5 @@ const TriviaTrainer = (url) => {
 
 const App = TriviaTrainer('https://jservice.io/api/')
 randomBtn.addEventListener('click', App.renderQuestion)
+App.renderQuestion()
 
