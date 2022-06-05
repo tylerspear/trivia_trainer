@@ -1,11 +1,9 @@
 :root {
     --yellow: #FFCC00;
-    --blue: #060CE9;
+    --blue: #081484;
     --white: #fff;
     --heading: 'Kdam Thmor Pro', sans-serif;
     --body: 'Tinos', serif;
-    
-
 }
 
 * {
@@ -20,11 +18,12 @@ body {
 
 .header {
     text-align: center;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     color: var(--white);
     font-family: var(--heading);
     letter-spacing: 0.3rem;
     font-size: 3rem;
+    text-shadow: 2px 2px 2px #000;
 }
 
 .container {
@@ -33,9 +32,9 @@ body {
 }
 
 .btn-box {
-    padding: 5rem 3rem;
+    padding: 5rem;
     display: inline-block;
-    flex: 0 1 15rem;
+    flex: 0 1 20rem;
     font-size: 2.5rem;
     cursor: pointer;
     color: var(--yellow);
@@ -48,9 +47,20 @@ body {
 }
 
 #game-selector {
-    margin-top: 3rem;
+    margin-top: 6rem;
 }
 
-#random-container {
-    display: none;
+footer {
+    font-family: var(--heading);
+    padding: 5rem;
+    color: var(--white);
+    text-align: center;
+}
+
+footer a {
+    color: var(--white);
+}
+
+footer a:hover {
+    color: var(--yellow);
 }

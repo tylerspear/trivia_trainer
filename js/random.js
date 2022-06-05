@@ -3,6 +3,7 @@ const questionEl = document.getElementById('question')
 const randomBtn = document.getElementById('randomBtn')
 const answerEl = document.getElementById('answer-container')
 const answerText = document.getElementById('answer-text')
+const questionCategory = document.getElementById('category')
 
 const TriviaTrainer = (url) => {
 
@@ -15,13 +16,15 @@ const TriviaTrainer = (url) => {
         //clear out any previous answers
         answerText.textContent = ''
 
-        return data
+        return data[0]
     }
 
     async function renderQuestion() {
         randomBtn.disabled = "true"
         const data = await getRandomQuestion()
-        questionEl.textContent = data[0].question
+        console.log(data)
+        questionEl.textContent = data.question
+        questionCategory.textContent = `Category: ${data.category.title}`
 
         //remove any 'reveal answer' buttons that were previously rendered
         answerEl.removeChild(answerEl.firstChild)
@@ -30,7 +33,7 @@ const TriviaTrainer = (url) => {
         const answerBtn = document.createElement('button')
         answerBtn.textContent = "Reveal Answer"
         answerBtn.addEventListener('click', () => {
-            answerText.textContent = data[0].answer
+            answerText.innerHTML = `Answer: ${data.answer}`
             randomBtn.disabled = false
             answerBtn.disabled = true
         })
