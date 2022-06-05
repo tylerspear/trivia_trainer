@@ -17,6 +17,7 @@
 body {
     background-color: var(--blue);
 }
+
 .header {
     text-align: center;
     margin: 1rem 0;
@@ -42,10 +43,12 @@ body {
     font-family: var(--body);
     text-transform: uppercase;
     border: 5px solid #000;
+    margin: 0 1rem;
+    text-decoration: none;
 }
 
 #game-selector {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 #random-container {
