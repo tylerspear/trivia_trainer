@@ -24,7 +24,7 @@ const TriviaTrainer = (url) => {
         const data = await getRandomQuestion()
         console.log(data)
         questionEl.textContent = data.question
-        questionCategory.textContent = `Category: ${data.category.title}`
+        questionCategory.innerHTML = `Category is: <span>${data.category.title}</span>`
 
         //remove any 'reveal answer' buttons that were previously rendered
         answerEl.removeChild(answerEl.firstChild)

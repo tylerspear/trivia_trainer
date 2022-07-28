@@ -3,7 +3,7 @@
     --blue: #081484;
     --white: #fff;
     --heading: 'Kdam Thmor Pro', sans-serif;
-    --body: 'Tinos', serif;
+    --body: 'Inter', sans-serif;
 }
 
 * {
@@ -52,7 +52,7 @@ body {
 
 footer {
     font-family: var(--heading);
-    padding: 5rem;
+    padding: 2rem;
     color: var(--white);
     text-align: center;
 }
