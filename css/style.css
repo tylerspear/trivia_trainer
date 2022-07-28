@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
 :root {
     --yellow: #FFCC00;
     --blue: #081484;
@@ -6,61 +11,124 @@
     --body: 'Inter', sans-serif;
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 body {
     background-color: var(--blue);
-}
-
-.header {
-    text-align: center;
-    margin: 1.5rem 0;
-    color: var(--white);
-    font-family: var(--heading);
-    letter-spacing: 0.3rem;
-    font-size: 3rem;
-    text-shadow: 2px 2px 2px #000;
+    font-family: var(--body);
 }
 
 .container {
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0 1rem;
+}
+
+.header {
+    color: #fff;
+    font-family: var(--heading);
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#game-selector {
     display: flex;
     justify-content: center;
 }
 
 .btn-box {
-    padding: 5rem;
-    display: inline-block;
-    flex: 0 1 20rem;
-    font-size: 2.5rem;
-    cursor: pointer;
-    color: var(--yellow);
-    background-color: var(--blue);
-    font-family: var(--body);
-    text-transform: uppercase;
-    border: 5px solid #000;
-    margin: 0 1rem;
+    border: 5px solid #fff;
+    font-size: 2rem;
+    color: #fff;
     text-decoration: none;
+    display: block;
+    padding: 3rem 2rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
 }
 
-#game-selector {
-    margin-top: 6rem;
+.btn-box:hover {
+    border: 5px solid var(--yellow);
+}
+
+#random-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    font-family: var(--body);
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#category {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#category span {
+    font-size: 2rem;
+}
+
+#question {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#answer-text {
+    font-size: 1.5rem;
+    margin: 1rem auto 2rem auto;
+}
+
+#answer-container {
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin: 0 auto 1rem auto;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--blue);
+    width: 300px;
+    transition: all 0.3s ease;
+}
+
+button:not([disabled]):hover {
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.37);
 }
 
 footer {
-    font-family: var(--heading);
-    padding: 2rem;
-    color: var(--white);
+    margin-top: 2rem;
+    color: #fff;
     text-align: center;
 }
 
 footer a {
-    color: var(--white);
+    color: #fff;
 }
 
-footer a:hover {
-    color: var(--yellow);
+@media only screen and (max-width: 500px) {
+    .header {
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+
+
+
+    #random-section {
+        padding: 2rem 1rem;
+    }
+
+    .btn-box {
+        padding: 2rem 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+        border: 2px solid #fff;
+    }
+    .btn-box:hover {
+        border: 2px solid var(--yellow);
+    }
 }
